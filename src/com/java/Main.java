@@ -25,8 +25,8 @@ public class Main {
         List<ProcessorResponse> responseList = luhnProcessor.getValidLuhnNumber(accounts);
 
         responseList.stream().forEach(x ->
-            System.out.println(MessageFormat.format("{0} is a {1} Luhn Number",
+            System.out.println(MessageFormat.format("{0} is a {1} Luhn Number and the result is {2}",
                 x.getAccountNumber(),
-                x.isValid() ? "valid" : "invalid")));
+                x.isValid() ? "valid" : "invalid", x.getResultNumber())));
     }
 }
